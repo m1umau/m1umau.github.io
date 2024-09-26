@@ -1,14 +1,19 @@
+// tähän kirjoita oman JSON tietueesi URL
 fetch('https://run.mocky.io/v3/f0a157d4-10ad-42a7-a24f-0d3bcb08c6a8'
 )
 
+// muunnetaan vastaus JSON muotoon
 .then(function (response) {
 return response.json();
 })
 
+// käsitellään muunnettu (eli JSON muotoinen) vastaus
 .then(function (responseJson) {
+// kutsutaan funktiota ja välitetään sille json-vastaus
 kerro(responseJson);
 })
 
+// jos tuli jokin virhe
 .catch(function (error) {
 document.getElementById("vastaus").innerHTML = "<p>Tietoa ei pystytä hakemaan</p>";
 })
