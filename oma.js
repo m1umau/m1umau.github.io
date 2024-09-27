@@ -32,5 +32,11 @@ for(var i = 0; i < data.sisalto.length; i++) {
 }
 teksti = teksti + "</ul>";
 
+teksti = teksti + "<ul>";
+for(var i = 0; i < data.sisalto.length; i++) {
+    teksti = teksti + "<p>" + data.tekniikat[i].aihe + "</p>";
+}
+teksti = teksti + "</ul>";
+
 document.getElementById("vastaus").innerHTML = teksti;
 }
