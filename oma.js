@@ -1,5 +1,5 @@
 // tähän kirjoita oman JSON tietueesi URL
-fetch('https://run.mocky.io/v3/f0a157d4-10ad-42a7-a24f-0d3bcb08c6a8'
+fetch('https://m1umau.github.io/moi.JSON'
 )
 
 // muunnetaan vastaus JSON muotoon
@@ -26,11 +26,11 @@ teksti = teksti + "<p><img src='" + data.kuva + "' alt='kuva' ></p>";
 teksti = teksti + "<h3>Opintojakso: " + data.opintojakso.nimi + " " + data.opintojakso.tunnus + " " + data.opintojakso.opintopisteet + " op</h3>";
 
 
-teksti = teksti + "<ul>";
+teksti = teksti + "<ul>"
 for(var i = 0; i < data.sisalto.length; i++) {
     teksti = teksti + "<li>" + data.sisalto[i] + "</li>";
 }
-teksti = teksti + "</ul>";
+teksti = teksti + "</ul>"
 
 document.getElementById("vastaus").innerHTML = teksti;
 }
