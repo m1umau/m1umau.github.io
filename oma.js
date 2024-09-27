@@ -26,11 +26,11 @@ teksti = teksti + "<p><img src='" + data.kuva + "' alt='kuva' ></p>";
 teksti = teksti + "<h3>Opintojakso: " + data.opintojakso.nimi + " " + data.opintojakso.tunnus + " " + data.opintojakso.opintopisteet + " op</h3>";
 
 
-teksti = teksti + "<ul>";
+teksti = teksti + "<ul>"
 for(var i = 0; i < data.sisalto.length; i++) {
     teksti = teksti + "<li>" + data.sisalto[i] + "</li>";
 }
-teksti = teksti + "</ul>";
+teksti = teksti + "</ul>"
 
 document.getElementById("vastaus").innerHTML = teksti;
 }
