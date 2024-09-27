@@ -33,7 +33,7 @@ for(var i = 0; i < data.sisalto.length; i++) {
 teksti = teksti + "</ul>";
 
 teksti = teksti + "<ul>";
-for(var i = 0; i < data.sisalto.length; i++) {
+for(var i = 0; i < data.tekniikat.length; i++) {
     teksti = teksti + "<p>" + data.tekniikat[i].aihe + "</p>";
 }
 teksti = teksti + "</ul>";
