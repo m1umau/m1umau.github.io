@@ -38,8 +38,8 @@ teksti = teksti + "</ul>";
 // haetaan tekniikat-tietoa objektitaulukosta
 teksti = teksti + "<ul>";
 for(var i = 0; i < data.tekniikat.length; i++) {
-    teksti = teksti + "<p>" + data.tekniikat[i].aihe + "</p>";
-    teksti = teksti + (data.tekniikat[i].linkki).link(data.tekniikat[i].linkki);
+    teksti = teksti + "<p>" + data.tekniikat[i].aihe + " ";
+    teksti = teksti + (data.tekniikat[i].linkki).link(data.tekniikat[i].linkki) + "</p>";
 }
 teksti = teksti + "</ul>";
 
