@@ -35,11 +35,12 @@ for(var i = 0; i < data.sisalto.length; i++) {
 }
 teksti = teksti + "</ul>";
 
+teksti = teksti + "<h3>Linkit</h3>";
 // haetaan tekniikat-tietoa objektitaulukosta
 teksti = teksti + "<ul>";
 for(var i = 0; i < data.tekniikat.length; i++) {
-    teksti = teksti + "<p>" + data.tekniikat[i].aihe + " ";
-    teksti = teksti + (data.tekniikat[i].linkki).link(data.tekniikat[i].linkki) + "</p>";
+    teksti = teksti + "<li>" + data.tekniikat[i].aihe + " ";
+    teksti = teksti + (data.tekniikat[i].linkki).link(data.tekniikat[i].linkki) + "</li>";
 }
 teksti = teksti + "</ul>";
 
