@@ -39,6 +39,7 @@ teksti = teksti + "</ul>";
 teksti = teksti + "<ul>";
 for(var i = 0; i < data.tekniikat.length; i++) {
     teksti = teksti + "<p>" + data.tekniikat[i].aihe + "</p>";
+    teksti = teksti + (data.tekniikat[i].linkki).link(data.tekniikat[i].linkki);
 }
 teksti = teksti + "</ul>";
 
