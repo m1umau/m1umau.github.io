@@ -1,0 +1,19 @@
+{
+    "nimi":"Digitekniikat",
+    "osallistujia":10,
+    "nimet":[
+        {"etunimi":"Maija","sukunimi":"Muikea"},
+        {"etunimi":"Riina","sukunimi":"Raikas"},
+        {"etunimi":"Aino","sukunimi":"Avulias"},
+        {"etunimi":"Peppi","sukunimi":"Pirteä"},
+        {"etunimi":"Senja","sukunimi":"Selkeä"},
+        {"etunimi":"Tiina","sukunimi":"Tarmokas"},
+        {"etunimi":"Liina","sukunimi":"Loiva"},
+        {"etunimi":"Oona","sukunimi":"Omituinen"},
+        {"etunimi":"Jemina","sukunimi":"Järkevä"},
+        {"etunimi":"Helmi","sukunimi":"Hilpeä"}
+    ],
+    "ajankohta":{"alku":"pvm","loppu":"pvm2"},
+    "kesto":8,
+    "kuva":"kuva"
+}
