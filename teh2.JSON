@@ -13,7 +13,7 @@
         {"etunimi":"Jemina","sukunimi":"Järkevä"},
         {"etunimi":"Helmi","sukunimi":"Hilpeä"}
     ],
-    "ajankohta":{"alku":"pvm","loppu":"pvm2"},
+    "ajankohta":{"alku":"19.8.2024","loppu":"11.10.2024"},
     "kesto":8,
-    "kuva":"kuva"
+    "kuva":"https://m1umau.github.io/vscodepic.png"
 }
