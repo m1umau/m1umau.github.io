@@ -21,10 +21,10 @@ var teksti = ""; // määritellään muuttuja, johon tulostettava tieto kerätä
 teksti = "<h1>Sää - siitä on aina jotain kerrottavaa</h1>";
 teksti = teksti + "<p>Millainen sää Helsingissä on? Entä Tampereella?</p>";
 
-teksti = teksti + "<li>kaupunki: " + data.name + "</li>";
+teksti = teksti + "<ul><li>kaupunki: " + data.name + "</li>";
 teksti = teksti + "<li>kuvaus: " + data.weather[0].description + "</li>";
 teksti = teksti + "<li>lämpötila: " + data.main.temp + "&degC</li>";
-teksti = teksti + "<li>tuulen nopeus: " + data.wind.speed + " m/s</li>";
+teksti = teksti + "<li>tuulen nopeus: " + data.wind.speed + " m/s</li></ul>";
 
 var kuva = 'http://openweathermap.org/img/w/' + data.weather[0].icon + '.png';
 // tähän tulee muiden tietojen käsittely
