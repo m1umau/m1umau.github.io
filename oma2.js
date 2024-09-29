@@ -30,11 +30,11 @@ teksti = teksti + "<p>Alkamispäivä: " + data.ajankohta.alku + "</p>";
 teksti = teksti + "<p>Loppumispäivä: " + data.ajankohta.loppu + "</p>";
 
 // haetaan sisältö-taulukkomuotoista tietoa
-teksti = teksti + "<p>Osallistujien nimet: ";
+teksti = teksti + "<p>Osallistujien nimet: <ul>";
 for(var i = 0; i < data.nimet.length; i++) {
     teksti = teksti + "<li>" + data.nimet[i].etunimi + " " + data.nimet[i].sukunimi + "</li>";
 }
-teksti = teksti + "</p>";
+teksti = teksti + "</ul></p>";
 
 teksti = teksti + "<p><img src='" + data.kuva + "' alt='kuva' ></p>";
 
