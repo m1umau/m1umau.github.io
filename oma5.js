@@ -18,6 +18,9 @@ function saa(data){
 var teksti = ""; // määritellään muuttuja, johon tulostettava tieto kerätään
 
 // otsikkotiedon hakeminen ja sijoittaminen h1-elementtiin
+teksti = "<h1>Sää - siitä on aina jotain kerrottavaa</h1>";
+teksti = teksti + "<p>Millainen sää Helsingissä on? Entä Tampereella?</p>";
+
 teksti = teksti + "<ul><li>kaupunki: " + data.name + "</li>";
 teksti = teksti + "<li>kuvaus: " + data.weather[0].description + "</li>";
 teksti = teksti + "<li>lämpötila: " + data.main.temp + "&degC</li>";
