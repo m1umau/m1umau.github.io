@@ -25,7 +25,7 @@ teksti = teksti + "<li>tuulen nopeus: " + data.wind.speed + " m/s</li>";
 
 var kuva = 'http://openweathermap.org/img/w/' + data.weather[0].icon + '.png';
 // tähän tulee muiden tietojen käsittely
-teksti = teksti + "<p><img src='" + kuva + "' alt='kuva' ></p></ul>";
+teksti = teksti + "<p><img class='center' src='" + kuva + "' alt='kuva' ></p></ul>";
 // teksti-muuttujan sisällön tulostus
 document.getElementById("vastaus").innerHTML = teksti;
 }

@@ -27,3 +27,18 @@ color: black;
 background-color: #04AA6D;
 color: white;
 }
+
+.parent {
+    margin: 1rem;
+}
+
+.child {
+    display: inline-block;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
