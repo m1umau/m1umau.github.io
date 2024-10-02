@@ -29,11 +29,12 @@ color: white;
 }
 
 .parent {
-    margin: 1rem;
+
 }
 
 .child {
     display: inline-block;
+    padding: 0rem 1rem;
 }
 
 .center {
