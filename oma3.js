@@ -15,12 +15,16 @@ tapahtumat(responseJson);
 })
 
 function tapahtumat(data) {
+// luodaan tekstimuuttuja tiedoille
 var teksti = "";
+// lisätään otsikko h1-elementtiin
 teksti = "<h1>Tampereella tapahtuu</h1>";
+// haetaan tiedot
 for (var i = 0; i < data.length; i++) {
     teksti = teksti + "<h3>" + data[i].title + "</h3>";
     teksti = teksti + "<p>" + data[i].description + "</p>";
     teksti = teksti + "<p> <a href=" + data[i].url + ">" + data[i].url + "</a></p>";
 }
+// teksti-muuttujan sisällön tulostus
 document.getElementById("vastaus").innerHTML = teksti;
 }

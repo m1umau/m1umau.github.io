@@ -17,14 +17,14 @@ saa2(responseJson);
 function saa2(data){
 var teksti = ""; // määritellään muuttuja, johon tulostettava tieto kerätään
 
-// otsikkotiedon hakeminen ja sijoittaminen h1-elementtiin
+// haetaan tiedot listaan
 teksti = teksti + "<ul><li>kaupunki: " + data.name + "</li>";
 teksti = teksti + "<li>kuvaus: " + data.weather[0].description + "</li>";
 teksti = teksti + "<li>lämpötila: " + data.main.temp + "&degC</li>";
 teksti = teksti + "<li>tuulen nopeus: " + data.wind.speed + " m/s</li>";
-
+// haetaan kuva
 var kuva = 'http://openweathermap.org/img/w/' + data.weather[0].icon + '.png';
-// tähän tulee muiden tietojen käsittely
+// sijoitetaan kuva
 teksti = teksti + "<p><img class='center' src='" + kuva + "' alt='kuva' ></p></ul>";
 // teksti-muuttujan sisällön tulostus
 document.getElementById("vastaus2").innerHTML = teksti;

@@ -36,6 +36,7 @@ for(var i = 0; i < data.nimet.length; i++) {
 }
 teksti = teksti + "</ul></p>";
 
+// haetaan kuva
 teksti = teksti + "<p><img src='" + data.kuva + "' alt='kuva' ></p>";
 
 // teksti-muuttujan sisällön tulostus
