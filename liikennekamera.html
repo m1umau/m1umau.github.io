@@ -14,9 +14,45 @@
     <a href="https://m1umau.github.io/junat.html">Junat</a>
 </div>
 
+<div>
+    <h1>Autolla tampereelle</h1>
+    <p>Minkälainen keli siellä on?</p>
+</div>
+
 <!-- haetaan JSON-tiedot -->
-<div id="vastaus">
-<script src='oma2.js'></script>
+<div id="vastaus3">
+<script>
+
+fetch('https://tie.digitraffic.fi/api/weathercam/v1/stations/C04507/data')
+// Muunnetaan vastaus JSON muotoon
+.then(function (response) { return response.json();
+})
+
+// Käsitellään muunnettu (eli JSON muotoinen) vastaus
+.then(function (responseJson) {
+
+// kutsutaan saa-funktiota saa(responseJson);
+saa3(responseJson);
+})
+
+// Jos tuli jokin virhe
+.catch(function (error) { document.getElementById("vastaus3").innerHTML = "<p>Tietoa ei pystytä hakemaan</p>";
+})
+
+function saa3(data){
+var teksti = ""; // määritellään muuttuja, johon tulostettava tieto kerätään
+var kuva = 'https://weathercam.digitraffic.fi/' + data.presets[i].id + '.jpg';
+
+for (var i = 0; i < data.length; i++) {
+    teksti = teksti + "<h1>" + data.presets[i].measuredTime + "</h1>";
+    teksti = teksti + "<p><img class='center' src='" + kuva + "' alt='kuva' ></p>";
+}
+
+// teksti-muuttujan sisällön tulostus
+document.getElementById("vastaus3").innerHTML = teksti;
+}
+
+</script>
 </div>
 
 </body>
