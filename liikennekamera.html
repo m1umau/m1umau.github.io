@@ -42,8 +42,8 @@ saa3(responseJson);
 function saa3(data){
 var teksti = ""; // määritellään muuttuja, johon tulostettava tieto kerätään
 
-for (var i = 0; i < data.length; i++) {
-    teksti = teksti + "<h1>" + data.presets[i].measuredTime + "</h1>";
+for (var i = 0; i < data.presets.length; i++) {
+    teksti = teksti + "<h3>" + data.presets[i].measuredTime + "</h3>";
     var kuva = 'https://weathercam.digitraffic.fi/' + data.presets[i].id + '.jpg';
     teksti = teksti + "<p><img class='center' src='" + kuva + "' alt='kuva' ></p>";
 }
