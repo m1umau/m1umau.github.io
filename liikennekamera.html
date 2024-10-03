@@ -45,7 +45,7 @@ var teksti = ""; // määritellään muuttuja, johon tulostettava tieto kerätä
 for (var i = 0; i < data.presets.length; i++) {
     teksti = teksti + "<h3>" + data.presets[i].measuredTime + "</h3>";
     var kuva = 'https://weathercam.digitraffic.fi/' + data.presets[i].id + '.jpg';
-    teksti = teksti + "<p><img class='center' src='" + kuva + "' alt='kuva' ></p>";
+    teksti = teksti + "<p><img class='moi' src='" + kuva + "' alt='kuva' ></p>";
 }
 
 // teksti-muuttujan sisällön tulostus
