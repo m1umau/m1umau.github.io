@@ -14,9 +14,67 @@
     <a class="active" href="https://m1umau.github.io/junat.html">Junat</a>
 </div>
 
+<div>
+    <h1>Mennäänkö junalla Tampereelle?</h1>
+    <p>Kuinkahan usein junia menee?</p>
+</div>
+
 <!-- haetaan JSON-tiedot -->
-<div id="vastaus4">
-<script></script>
+<div id="vastaus7">
+<script>
+
+fetch('https://rata.digitraffic.fi/api/v1/live-trains/station/HKI?departing_trains=100&include_nonstopping=false')
+// Muunnetaan vastaus JSON muotoon
+.then(function (response) { return response.json();
+})
+
+// Käsitellään muunnettu (eli JSON muotoinen) vastaus
+.then(function (responseJson) {
+
+// kutsutaan saa-funktiota saa(responseJson);
+saa6(responseJson);
+})
+
+// Jos tuli jokin virhe
+.catch(function (error) { document.getElementById("vastaus7").innerHTML = "<p>Tietoa ei pystytä hakemaan</p>";
+})
+
+function saa6(data){
+var teksti = ""; // määritellään muuttuja, johon tulostettava tieto kerätään
+
+for (var i = 0; i < data.length; i++) {
+    
+    for (var j = 0; j < data[i].timeTableRows.length; j++) {
+
+        if (data[i].timeTableRows[j].type=="DEPARTURE") {
+
+            teksti = teksti + "<h1>Juna nro " + data[i].trainNumber + "</h1>";
+            teksti = teksti + "<p>Junan tyyppi: " + data[i].trainType + "</p>";
+
+            if (data[i].trainCategory=="Long-distance") {
+                teksti = teksti + "<p>Juna on pitkänmatkanjuna.</p>";
+            }
+
+            var lahtopaikka = data[i].timeTableRows[0].stationShortCode;
+            var maaranpaa = data[i].timeTableRows[vika].stationShortCode;
+
+
+            var pvmH = data[i].timeTableRows[0].scheduledTime;
+            var pvmT = data[i].timeTableRows[vika].scheduledTime;
+            teksti = teksti + "<p>Lähtee Helsingistä " + pvmH.substr(0, 10) + " kello: " + pvmH.substr(11, 5);
+            teksti = teksti + ". Saapuu Tampereelle " + pvmT.substr(0, 10) + " kello: " + pvmH.substr(11, 5);
+
+        }
+
+    }
+
+}
+
+// teksti-muuttujan sisällön tulostus
+document.getElementById("vastaus7").innerHTML = teksti;
+}
+
+</script>
 </div>
 
 </body>
