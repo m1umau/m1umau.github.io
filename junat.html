@@ -48,16 +48,12 @@ for (var i = 0; i < data.length; i++) {
 
         if (data[i].timeTableRows[j].type=="DEPARTURE") {
 
-            teksti = teksti + "<h1>Juna nro " + data[i].trainNumber + "</h1>";
+            teksti = teksti + "<h3>Juna nro " + data[i].trainNumber + "</h3>";
             teksti = teksti + "<p>Junan tyyppi: " + data[i].trainType + "</p>";
             
             if (data[i].trainCategory=="Long-distance") {
                 teksti = teksti + "<p>Juna on pitkänmatkanjuna.</p>";
             }
-
-            var lahtopaikka = data[i].timeTableRows[0].stationShortCode;
-            var maaranpaa = data[i].timeTableRows[vika].stationShortCode;
-
 
             var pvmH = data[i].timeTableRows[0].scheduledTime;
             var pvmT = data[i].timeTableRows[vika].scheduledTime;
