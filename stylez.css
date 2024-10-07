@@ -27,3 +27,8 @@ padding: 80px 40px;
 #kuukuva {
     max-width: 600px;
 }
+
+.responsive {
+    width: 100%;
+    height: auto;
+}
