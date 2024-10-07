@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Astrolo - Avaruus tänään</title>
+  <title>Astrolo - Etusivu</title>
   <link rel="stylesheet" href="stylez.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,7 +12,7 @@
 
 <div id="varitausta">
   <h1>Astrolo</h1>
-  <p>Avaruus tänään: Näe mitä planeetat tekevät juuri nyt</p> 
+  <p>Tietoa avaruudesta</p> 
 </div>
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
@@ -45,32 +45,24 @@
     <!-- The slideshow/carousel -->
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="merkurius2.jpg" alt="Kerrostaloja meren rannassa" class="d-block" style="width:100%">
+        <img src="merkurius2.jpg" alt="Merkurius" class="d-block" style="width:100%">
         <div class="carousel-caption">
-          <h3>Kalasatama</h3>
-          <p>Yöuinnilla mustikkamaalla</p>
+          <h3 href="merkurius.html">Merkurius</h3>
+          <p href="merkurius.html">Katso tietoa merkuriuksesta</p>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="teltta2.jpg" alt="Alttari kirkossa" class="d-block" style="width:100%">
-        <div class="carousel-caption">
-          <h3>Nauvon kirkko</h3>
-          <p>Ihmettelemässä Nauvon kirkkoa</p>
-        </div> 
+        <img src="teltta2.jpg" alt="Teltta vuoristossa tähtitaivaan alla" class="d-block" style="width:100%">
       </div>
       <div class="carousel-item">
-        <img src="kuu2.jpg" alt="Venesataman ranta" class="d-block" style="width:100%">
+        <img src="kuu2.jpg" alt="Kuu" class="d-block" style="width:100%">
         <div class="carousel-caption">
-          <h3>Venesatama</h3>
-          <p>Nauvon vierasvenesatamassa illalla</p>
+          <h3 href="kuu.html">Kuu</h3>
+          <p href="kuu.html">Katso tietoa kuusta</p>
         </div>  
       </div>
     <div class="carousel-item">
-        <img src="galaksi2.jpg" alt="Koira ja ihmisiä" class="d-block" style="width:100%">
-        <div class="carousel-caption" style="background-color: rgba(255, 255, 255, 0.603); color: rgb(0, 0, 0)">
-          <h3>Senaatintori</h3>
-          <p>Mielenosoituksessa karvakamujen kanssa</p>
-        </div>
+        <img src="galaksi2.jpg" alt="Galaksi" class="d-block" style="width:100%">
     </div>
     </div>
     
@@ -81,48 +73,6 @@
     <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
       <span class="carousel-control-next-icon"></span>
     </button>
-  </div>
-
-<div id="vastaus3">
-<script>
-fetch('https://m1umau.github.io/avaruus.JSON')
-// Muunnetaan vastaus JSON muotoon
-.then(function (response) { return response.json();
-})
-
-// Käsitellään muunnettu (eli JSON muotoinen) vastaus
-.then(function (responseJson) {
-
-// kutsutaan saa-funktiota saa(responseJson);
-saa3(responseJson);
-})
-
-// Jos tuli jokin virhe
-.catch(function (error) { document.getElementById("vastaus3").innerHTML = "<p>Tietoa ei pystytä hakemaan</p>";
-})
-
-function saa3(data){
-var teksti = ""; // määritellään muuttuja, johon tulostettava tieto kerätään
-
-// haetaan otsikko teksti-muuttujaan
-teksti = teksti + "<h1>" + data.otsikko + "</h1>";
-// haetaan sivun kuvaus teksti-muuttujaan
-teksti = teksti + "<p>" + data.kuvaus + "</p>";
-
-teksti = teksti + "<p>Nimi: " + data.planeetta.nimi;
-teksti = teksti + "<br>Kiertoaika auringon ympäri: " + data.planeetta.kiertoaika + " vuorokautta";
-teksti = teksti + "<br>Pyörähdysaika akselinsa ympäri: " + data.planeetta.pyorahdys + " vuorokautta</li>";
-
-teksti = teksti + "<h3>Koostumus</h3>";
-
-for (var i = 0; i < data.koostumus.length; i++) {
-    teksti = teksti + "<p>" + data.koostumus[i].aine + ": " + data.koostumus[i].prosentti + " prosenttia</p>";
-}
-
-// teksti-muuttujan sisällön tulostus
-document.getElementById("vastaus3").innerHTML = teksti;
-}
-</script>
 </div>
 
 <div class="container mt-5">
