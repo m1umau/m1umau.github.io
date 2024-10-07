@@ -19,3 +19,11 @@ padding: 80px 40px;
 #vastaus3 {
     padding-left: 40px;
 }
+
+#merckuva {
+    max-width: 500px;
+}
+
+#kuukuva {
+    max-width: 600px;
+}

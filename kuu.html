@@ -113,6 +113,9 @@ for (var i = 0; i < data.taivaankappale[1].koostumus.length; i++) {
 }
 teksti = teksti + "</ul>";
 
+var kuva = data.kuva[1];
+teksti = teksti + "<p><img id='kuukuva' src='" + kuva + "' alt='kuva' ></p>";
+
 // teksti-muuttujan sisällön tulostus
 document.getElementById("vastaus3").innerHTML = teksti;
 }
