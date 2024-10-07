@@ -32,3 +32,13 @@ padding: 80px 40px;
     width: 100%;
     height: auto;
 }
+
+a:link, a:visited {
+    color: white;
+    text-decoration: none;
+    cursor: auto;
+}
+  
+a:link:active, a:visited:active {
+    color: (internal value);
+}
