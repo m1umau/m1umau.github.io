@@ -1,12 +1,21 @@
 {
-    "otsikko":"Merkurius",
-    "kuvaus":"Tällä sivulla kerrotaan tietoja Merkuriuksesta, joka on aurinkokunnan pienin ja Aurinkoa lähin planeetta.",
-    "kuva":"https://m1umau.github.io/mercury.png",
-    "planeetta":{"nimi":"Merkurius","kiertoaika":88,"pyorahdys":59},
-    "koostumus":[{"aine":"happimolekyylit","prosentti":42},
-        {"aine":"natrium","prosentti":29},
-        {"aine":"vety","prosentti":22},
-        {"aine":"helium","prosentti":6},
-        {"aine":"kalium","prosentti":0.5}
-    ]
-}
+    "kuva":["https://m1umau.github.io/mercury.png"],
+    "taivaankappale":[{"nimi":"Merkurius","kiertoaika":88,"pyorahdys":59,
+    "koostumus":[{"aine":"Happi","prosentti":42},
+    {"aine":"Natrium","prosentti":29},
+    {"aine":"Vety","prosentti":22},
+    {"aine":"Helium","prosentti":6},
+    {"aine":"Kalium","prosentti":0.5}]
+    },
+    {"nimi":"Kuu", "kiertoaika":30,"pyorahdys":30,
+    "koostumus":[{"aine":"Happi","prosentti":43},
+    {"aine":"Pii","prosentti":20},
+    {"aine":"Magnesium","prosentti":19},
+    {"aine":"Rauta","prosentti":10},
+    {"aine":"Kalsium","prosentti":3},
+    {"aine":"Alumiini","prosentti":3},
+    {"aine":"Kromi","prosentti":0.42},
+    {"aine":"Titaani","prosentti":0.18},
+    {"aine":"Mangaani","prosentti":0.12}]
+    }]
+}  
