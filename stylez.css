@@ -3,6 +3,7 @@ height: 200px;
 background: #aaa;
 }
 
+/* sivun yläosan taustaväri ja taustakuva */
 #varitausta {
 background-image: url("revontuli.jpg");
 background-size: cover;
@@ -11,6 +12,7 @@ color: white;
 padding: 80px 40px;
 }
 
+/* teksti pois liian reunasta */
 #kuvaus {
     padding-top:40px;
     padding-left: 40px;
@@ -28,6 +30,7 @@ padding: 80px 40px;
     max-width: 600px;
 }
 
+/* kuvat responsiivisiksi */
 .responsive {
     width: 100%;
     height: auto;
