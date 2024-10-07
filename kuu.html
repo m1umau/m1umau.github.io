@@ -75,6 +75,11 @@
     </button>
   </div>
 
+<div>
+    <h1>Kuu</h1>
+    <p>Tällä sivulla kerrotaan tietoja Kuusta, joka on Maan ainoa luonnollinen kiertolainen ja aurinkokunnan viidenneksi suurin kuu.</p>
+</div>
+
 <div id="vastaus3">
 <script>
 fetch('https://m1umau.github.io/avaruus.JSON')
@@ -86,29 +91,24 @@ fetch('https://m1umau.github.io/avaruus.JSON')
 .then(function (responseJson) {
 
 // kutsutaan saa-funktiota saa(responseJson);
-saa3(responseJson);
+saa2(responseJson);
 })
 
 // Jos tuli jokin virhe
 .catch(function (error) { document.getElementById("vastaus3").innerHTML = "<p>Tietoa ei pystytä hakemaan</p>";
 })
 
-function saa3(data){
+function saa2(data){
 var teksti = ""; // määritellään muuttuja, johon tulostettava tieto kerätään
 
-// haetaan otsikko teksti-muuttujaan
-teksti = teksti + "<h1>" + data.otsikko + "</h1>";
-// haetaan sivun kuvaus teksti-muuttujaan
-teksti = teksti + "<p>" + data.kuvaus + "</p>";
-
-teksti = teksti + "<p>Nimi: " + data.planeetta.nimi;
-teksti = teksti + "<br>Kiertoaika auringon ympäri: " + data.planeetta.kiertoaika + " vuorokautta";
-teksti = teksti + "<br>Pyörähdysaika akselinsa ympäri: " + data.planeetta.pyorahdys + " vuorokautta</li>";
+teksti = teksti + "<p>Nimi: " + data.taivaankappale[1].nimi;
+teksti = teksti + "<br>Kiertoaika auringon ympäri: " + data.taivaankappale[1].kiertoaika + " vuorokautta";
+teksti = teksti + "<br>Pyörähdysaika akselinsa ympäri: " + data.taivaankappale[1].pyorahdys + " vuorokautta</li>";
 
 teksti = teksti + "<h3>Koostumus</h3>";
 
-for (var i = 0; i < data.koostumus.length; i++) {
-    teksti = teksti + "<p>" + data.koostumus[i].aine + ": " + data.koostumus[i].prosentti + " prosenttia</p>";
+for (var i = 0; i < data.taivaankappale[1].koostumus.length; i++) {
+    teksti = teksti + "<p>" + data.taivaankappale[1].koostumus[i].aine + ": " + data.taivaankappale[1].koostumus[i].prosentti + " prosenttia</p>";
 }
 
 // teksti-muuttujan sisällön tulostus
