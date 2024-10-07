@@ -4,6 +4,8 @@ background: #aaa;
 }
 
 #varitausta {
+background-image: url("header.jpg");
+background-size: cover;
 background-color: rgb(165, 96, 211);
 color: white;
 text-align: center;
